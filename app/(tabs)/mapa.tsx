@@ -22,7 +22,6 @@ export default function MapScreen() {
   ]
 
   useEffect(() => {
-    // Fit map to show all markers with padding
     if (mapRef.current && addresses.length > 0) {
       setTimeout(() => {
         mapRef.current?.fitToCoordinates(addresses, {
@@ -113,7 +112,6 @@ export default function MapScreen() {
   )
 }
 
-// We need to use StyleSheet for the map since className doesn't work well with it
 const styles = StyleSheet.create({
   map: {
     width: Dimensions.get("window").width,
